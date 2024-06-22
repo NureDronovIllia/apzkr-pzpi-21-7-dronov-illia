@@ -1,0 +1,38 @@
+[tool.black]
+color=true
+exclude = '''
+    /(
+        \.git
+        | \._build
+        | \.back.out
+        | \.build
+        | \.coverage
+        | \.dist
+        | \.hg
+        | \.mypy_cache
+        | \.tox
+        | \.venv
+        | ./src/coverage
+        | blib2to3
+        | tests/data
+    )/
+'''
+include = '\.pyi?$'
+line-length = 88
+
+[tool.isort]
+profile="black"
+skip = [
+    ".coverage",
+    "coverage/*",
+    "cov.html",
+    ".dockerignore",
+    ".env",
+    ".github",
+    ".gitignore",
+    ".html",
+    ".md",
+    ".python-version",
+    ".rst",
+    ".xml"
+]
